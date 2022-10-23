@@ -1,21 +1,21 @@
+/** @jsxImportSource @emotion/react */
 import logo from "./logo.svg";
-import "./App.css";
-import { sum } from "chaindecss";
+import { _ } from "../node_modules/chainedcss/dist/chainedcss.cjs.development";
 
 function App() {
-  console.log(sum);
   return (
-    <div className='App'>
-      <header>
-        <img src={logo} className='App-logo' alt='logo' />
+    <div {..._.textCenter()}>
+      <header {..._.bgWarmGray900().text`white`.textLg().p5()}>
+        <img src={logo} alt='logo' {..._.h(350)} />
+
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <a
-          className='App-link'
           href='https://reactjs.org'
           target='_blank'
           rel='noopener noreferrer'
+          {..._.text`#61dafb`}
         >
           Learn React
         </a>
@@ -25,6 +25,3 @@ function App() {
 }
 
 export default App;
-
-// npm install from file
-// npm install file:../chaindecss
